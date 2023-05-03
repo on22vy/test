@@ -4,13 +4,101 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Pomodoro App Demo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/simple.css" />
+    <link rel="stylesheet" href="assets/styles.css" />
     <script defer src="./build/bundle.js"></script>
 </head>
 
 <body>
-    <my-beispiel></my-beispiel>
-    <input type="text" id="myInput" />
-</body>
+    <main>
+      <!-- Pomodoro Box -->
+      <div class="pomodoro-box-container">
+        <div class="timer">
+          <div class="button-group mode-buttons" id="js-mode-buttons">
+  
+          <!-- Pomodoro Mode Button -->
+            <button
+              data-mode="pomodoro"
+              class="button active mode-button"
+              id="js-pomodoro"
+            >
+              Pomodoro
+            </button>
+  
+          <!-- Short Break Mode Button-->
+            <button
+              data-mode="short-break"
+              class="button mode-button"
+              id="js-short-break"
+            >
+              Short break
+            </button>
+  
+          <!-- Long Break Mode Button -->
+            <button
+              data-mode="long-break"
+              class="button mode-button"
+              id="js-long-break"
+            >
+              Long break
+            </button>
+          </div>
+  
+          <!-- Clock -->
+          <div class="clock" id="js-clock">
+            <span id="js-minutes">25</span>
+            <span class="separator">:</span>
+            <span id="js-seconds">00</span>
+          </div>
+  
+          <!-- Controller -->
+          <div class="controller">
+            <!-- Start Button -->
+            <button class="start-button" data-action="start" id="js-btn">
+              Start
+            </button>
+            <!-- Icons -->
+            <i class="fa-solid fa-arrows-rotate"></i>
+            <i class="fa-solid fa-gear"></i>
+          </div>
+        </div>
+      </div>
+
+      <!-- Task List -->
+      <div class="tasklist-container">
+        <!-- Task Input -->
+        <form class="input-container">
+          <input type="text" class="task-input" placeholder="Add tasks">
+          <i class="add-btn fa-solid fa-circle-plus"></i>
+        </form>
+
+        <!-- The list -->
+        <ul class="task-list">
+          <div class="task">
+            <div class="color-tag"></div>
+            <li>task 1</li>
+            <i class="fa-solid fa-check"></i>
+            <i class="fa-solid fa-trash"></i>
+          </div> 
+          <div class="task">
+            <div class="color-tag"></div>
+            <li>task 2</li>
+            <i class="fa-solid fa-check"></i>
+            <i class="fa-solid fa-trash"></i>
+          </div>
+        </ul>
+      </div>
+     
+      
+    </main>
+    <div class="hidden">
+      <audio src="backtowork.mp3" data-sound="pomodoro"></audio>
+      <audio src="break.mp3" data-sound="shortBreak"></audio>
+      <audio src="break.mp3" data-sound="longBreak"></audio>
+    </div>
+    <script src="https://kit.fontawesome.com/6c83e5c78d.js" crossorigin="anonymous"></script>
+  </body>
 
 </html>

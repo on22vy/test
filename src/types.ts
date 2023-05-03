@@ -1,0 +1,3 @@
+interface Tasks{
+    beschreibung: String;
+}

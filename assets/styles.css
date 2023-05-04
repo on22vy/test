@@ -95,11 +95,13 @@ button{
 }
 
 .fa-check{
+    cursor: pointer;
     font-size: 15px;
     margin-right: 12px;
 }
 
 .fa-trash{
+    cursor: pointer;
     font-size: 13px;
 }
 
@@ -144,6 +146,14 @@ button{
     border-radius: 8px;
     font-size: 14px;
     overflow: hidden;
+}
+
+.completed-task{
+    opacity: 0.5;
+}
+
+.cross-out{
+    text-decoration: line-through;
 }
 
 .color-tag{

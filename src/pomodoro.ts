@@ -221,7 +221,7 @@ function showNotification(mode: string) {
         } else if (mode === 'shortBreak'){
             notificationText = 'Take a break!';
         } else if (mode === 'longBreak') {
-            notificationText = 'Congratulations!';
+            notificationText = "👏👏👏 Good job! Now let's take a longggg break";
         }
 
         if (notificationText !== '') {

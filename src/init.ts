@@ -1,5 +1,5 @@
 import { addButton, modeButtons, resetButton, startButton, taskInput } from "./dom-utils";
-import { playStartButtonSound, resetTimer, startCountdown, switchModeOnClick} from "./pomodoro";
+import { controlTimer, playStartButtonSound, resetTimer, switchModeOnClick} from "./pomodoro";
 import { addTask, renderTasklist } from "./tasklist";
 
 function initApp(){
@@ -23,7 +23,7 @@ function initApp(){
     modeButtons.addEventListener('click', switchModeOnClick);
 
     startButton.addEventListener('click', ()=>{
-        startCountdown();
+        controlTimer();
         playStartButtonSound();
         
     });

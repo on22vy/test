@@ -117,7 +117,7 @@ let countdownInterval: ReturnType<typeof setTimeout>;
 let completedPomodoros = 0;
 
 // Function to start the countdown
-function startCountdown() {
+function controlTimer() {
     clearTimeout(countdownInterval);
     if(timer.isPaused) {
         // If the timer is paused, start/resume it
@@ -156,14 +156,14 @@ function startCountdown() {
                         switchModeTo('longBreak'); 
                         showNotification('longBreak');
                         resetTimer();
-                        startCountdown();
+                        controlTimer();
                             
                     } else {
                         // Switch to short break mode
                         switchModeTo('shortBreak');
                         showNotification('shortBreak')
                         resetTimer();
-                        startCountdown();
+                        controlTimer();
                     }
                     
                 } else if(activeMode === 'longBreak') {
@@ -178,7 +178,7 @@ function startCountdown() {
                     switchModeTo('pomodoro');
                     showNotification('pomodoro');
                     resetTimer();
-                    startCountdown();
+                    controlTimer();
                 }
 
             } else {
@@ -251,4 +251,4 @@ function playStartButtonSound(){
 }
 
 
-export{startCountdown, switchModeOnClick, resetTimer, playStartButtonSound, playEndTimerSound}
+export{controlTimer, switchModeOnClick, resetTimer, playStartButtonSound, playEndTimerSound}

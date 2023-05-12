@@ -12,8 +12,14 @@
 </head>
 
 <body>
+    <header>
+      <div class="header-content">
+        <img id="logo" src="/images/Logo.png">
+        <h2>Tomodoro</h2>
+      </div>
+    </header>
     <main>
-      <!-- Pomodoro Box -->
+      <!-- POMODORO TIMER SESSION -->
       <div class="pomodoro-box-container">
         <div class="timer">
           <div class="button-group mode-buttons" id="js-mode-buttons">
@@ -29,7 +35,7 @@
   
           <!-- Short Break Mode Button-->
             <button
-              data-mode="short-break"
+              data-mode="shortBreak"
               class="button mode-button"
               id="js-short-break"
             >
@@ -38,7 +44,7 @@
   
           <!-- Long Break Mode Button -->
             <button
-              data-mode="long-break"
+              data-mode="longBreak"
               class="button mode-button"
               id="js-long-break"
             >
@@ -56,47 +62,49 @@
           <!-- Controller -->
           <div class="controller">
             <!-- Start Button -->
-            <button class="start-button" data-action="start" id="js-btn">
+            <button data-action="start" class="start-button" id="js-btn">
               Start
             </button>
-            <!-- Icons -->
-            <i class="fa-solid fa-arrows-rotate"></i>
-            <i class="fa-solid fa-gear"></i>
+            <!-- Reset Icon -->
+            <i class="reset-btn fa-solid fa-arrows-rotate"></i>
           </div>
         </div>
       </div>
-
-      <!-- Task List -->
+      <!-- TOMATO ICONS SECTION -->
+      <div class="tomato-icons-container">
+      </div>
+      <!-- TASK LIST SECTION -->
       <div class="tasklist-container">
+
         <!-- Task Input -->
         <form class="input-container">
-          <input type="text" class="task-input" placeholder="Add tasks">
+          <input type="text" class="task-input" placeholder="Add tasks...">
           <i class="add-btn fa-solid fa-circle-plus"></i>
         </form>
 
-        <!-- The list -->
+        <!-- Task List Display -->
         <ul class="task-list">
-          <div class="task">
-            <div class="color-tag"></div>
-            <li>task 1</li>
-            <i class="fa-solid fa-check"></i>
-            <i class="fa-solid fa-trash"></i>
-          </div> 
-          <div class="task">
-            <div class="color-tag"></div>
-            <li>task 2</li>
-            <i class="fa-solid fa-check"></i>
-            <i class="fa-solid fa-trash"></i>
-          </div>
         </ul>
+
       </div>
-     
-      
     </main>
+    <footer class="footer">
+      <p>
+        Copyright ©
+        <script>
+          document.write(new Date().getFullYear())
+        </script>
+        on22vy 
+      </p>
+      <a href="https://github.com/on22vy/JavaScript-Pomodoro-App">
+        <i class="fa-brands fa-github"></i>
+      </a>
+    </footer>
     <div class="hidden">
-      <audio src="backtowork.mp3" data-sound="pomodoro"></audio>
-      <audio src="break.mp3" data-sound="shortBreak"></audio>
-      <audio src="break.mp3" data-sound="longBreak"></audio>
+      <audio id = "break-sound" src="/audio/break.mp3" data-sound="pomodoro"></audio>
+      <audio id = "back-to-work-sound" src="/audio/backtowork.mp3" data-sound="shortBreak"></audio>
+      <audio id = "back-to-work-sound" src="/audio/backtowork.mp3" data-sound="longBreak"></audio>
+      <audio id = "start-button-sound" src="/audio/button-sound.mp3"></audio>
     </div>
     <script src="https://kit.fontawesome.com/6c83e5c78d.js" crossorigin="anonymous"></script>
   </body>

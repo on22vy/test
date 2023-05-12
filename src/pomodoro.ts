@@ -4,9 +4,9 @@ import { backToWorkSound, breakSound, buttonSound, minutesElement, secondsElemen
 
 // Initialize the timer object with initial values
 const timer: Timer = {
-    pomodoro: 1,
-    shortBreak: 1,
-    longBreak: 1,
+    pomodoro: 25,
+    shortBreak: 5,
+    longBreak: 15,
     isPaused: true
 };
 

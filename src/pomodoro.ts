@@ -116,7 +116,7 @@ let countdownInterval: ReturnType<typeof setTimeout>;
 // Variable to keep track of completed pomodoros
 let completedPomodoros = 0;
 
-// Function to start the countdown
+// Function to start, pause or resume timer
 function controlTimer() {
     clearTimeout(countdownInterval);
     if(timer.isPaused) {
